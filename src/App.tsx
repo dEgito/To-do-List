@@ -1,9 +1,12 @@
+import { Home } from "./pages/Home";
+import GlobalStyle from "./assets/styles/GlobalStyle";
 
 function App() {
   return (
-    <div>
-      <h1>Henlo</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Home />
+    </>
   );
 }
 
