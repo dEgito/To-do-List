@@ -1,5 +1,5 @@
 import Logo from "../../assets/images/Ignite.svg";
-import { Container } from "./style";
+import { Container, SearchBar } from "./style";
 
 export function Home() {
   return (
@@ -8,13 +8,13 @@ export function Home() {
         <img src={Logo} />
       </header>
 
-      <div>
+      <SearchBar>
         <input />
         <button>
           Criar
           <img />
         </button>
-      </div>
+      </SearchBar>
 
       <div>
         <div>
