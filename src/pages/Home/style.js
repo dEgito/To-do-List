@@ -94,10 +94,11 @@ export const Progress = styled.div`
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       color: var(--gray-200);
       border-radius: 100%;
       background-color: var(--gray-400);
+      height: 1.3rem;
       width: 1.6rem;
     }
   }
