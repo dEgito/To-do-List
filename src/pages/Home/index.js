@@ -1,5 +1,7 @@
 import Logo from "../../assets/images/Ignite.svg";
-import { Container, SearchBar } from "./style";
+import Clipboard from "../../assets/images/Clipboard.svg"
+import { Container, SearchBar, Section, Progress, Content } from "./style";
+import { PlusCircle, ClipboardText } from "phosphor-react";
 
 export function Home() {
   return (
@@ -9,32 +11,32 @@ export function Home() {
       </header>
 
       <SearchBar>
-        <input />
+        <textarea>Adicione uma nova tarefa</textarea>
         <button>
           Criar
-          <img />
+          <PlusCircle size={20}/>
         </button>
       </SearchBar>
 
-      <div>
-        <div>
-          <p>Tarefas criadas</p>
-          <span>0</span>
-        </div>
+      <Section>
+        <Progress>
+          <div task="to-do">
+            <p task="to-do">Tarefas criadas</p>
+            <span>0</span>
+          </div>
 
-        <div>
-          <p>Concluídas</p>
-          <span>0</span>
-        </div>
+          <div>
+            <p task="done">Concluídas</p>
+            <span>0</span>
+          </div>
+        </Progress>
 
-        <hr />
-
-        <div>
-          <img />
+        <Content>
+          <ClipboardText size={64}/>
           <h3>Você ainda não tem tarefas adicionadas</h3>
           <p>Crie tarefas e organize seus itens a fazer</p>
-        </div>
-      </div>
+        </Content>
+      </Section>
     </Container>
   );
 }
