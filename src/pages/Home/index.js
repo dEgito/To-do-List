@@ -1,5 +1,4 @@
 import Logo from "../../assets/images/Ignite.svg";
-import Clipboard from "../../assets/images/Clipboard.svg"
 import { Container, SearchBar, Section, Progress, Content } from "./style";
 import { PlusCircle, ClipboardText } from "phosphor-react";
 
@@ -7,7 +6,7 @@ export function Home() {
   return (
     <Container>
       <header>
-        <img src={Logo} />
+        <img src={Logo} alt="logo rocketseat"/>
       </header>
 
       <SearchBar>
@@ -20,7 +19,7 @@ export function Home() {
 
       <Section>
         <Progress>
-          <div task="to-do">
+          <div>
             <p task="to-do">Tarefas criadas</p>
             <span>0</span>
           </div>

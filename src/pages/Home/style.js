@@ -45,11 +45,16 @@ export const SearchBar = styled.div`
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: .5rem;
+    gap: 0.5rem;
     padding: 1rem;
     border-radius: 8px;
     color: var(--white);
     background-color: var(--blue-500);
+
+    &:hover {
+      background-color: var(--blue-300);
+      transition: background-color 0.1s;
+    }
   }
 `;
 
@@ -76,18 +81,21 @@ export const Progress = styled.div`
     gap: 0.25rem;
     font-size: 0.875rem;
     font-weight: bold;
-    color: ${(props) => {
-      switch (props.task) {
-        case "to-do":
-          return "var(--blue-300)";
 
-        case "done":
-          return "var(--purple-300)";
+    > p {
+      color: ${(props) => {
+        switch (props.task) {
+          case "to-do":
+            return "var(--blue-300)";
 
-        default:
-          return "var(--gray-300)";
-      }
-    }};
+          case "done":
+            return "var(--purple-300)";
+
+          default:
+            return "var(--gray-300)";
+        }
+      }};
+    }
 
     span {
       display: flex;
