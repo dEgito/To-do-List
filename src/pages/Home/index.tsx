@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from '../../assets/images/Ignite.svg';
+import Logo from '../../assets/images/Ignite.svg';
 import {
   Container,
   SearchBar,
