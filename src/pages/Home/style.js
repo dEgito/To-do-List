@@ -129,3 +129,86 @@ export const Content = styled.div`
     font-weight: bold;
   }
 `;
+
+export const Task = styled.label`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 1rem;
+  width: 46rem;
+  border-radius: 4px;
+  border: 1px solid var(--gray-400);
+  background-color: var(--gray-500);
+
+  > div {
+    display: flex;
+    gap: 0.75rem;
+
+    p {
+      font-size: 1rem;
+      color: var(--gray-100);
+    }
+  }
+
+  label {
+    display: block;
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 18px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        & ~ span {
+          background-color: var(--purple-500);
+          border: none;
+        }
+
+        & ~ span:after {
+          display: block;
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 2px solid var(--blue-300);
+      border-radius: 20px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 3px;
+        width: 3px;
+        height: 6px;
+        border: solid var(--white);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--gray-300);
+
+    &:hover {
+      color: var(--red-500);
+      transition: color 0.1s;
+    }
+  }
+`;

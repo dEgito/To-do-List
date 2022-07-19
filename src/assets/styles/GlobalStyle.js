@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         --gray-600: #1a1a1a;
         --gray-700: #0d0d0d;
 
-        -red-500: #e25858;
+        --red-500: #e25858;
     }
 
     :focus {
